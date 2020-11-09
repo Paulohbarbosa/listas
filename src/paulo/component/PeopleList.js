@@ -1,6 +1,6 @@
 import React from 'react'
 import {View, StyleSheet, SafeAreaView, FlatList, Text} from 'react-native'
-import PeopleListItem from './PeopleListItem'
+import PeopleListItem from './CardPeopleListItem'
 
 const PeopleList = props => {
     const {peoples, onPressItem} = props
@@ -27,7 +27,7 @@ const PeopleList = props => {
 
     return (
         <View style={style.container}>
-            <SafeAreaView>
+            <SafeAreaView >
                 <FlatList
                     data={peoples}
                     renderItem={renderItem}
@@ -43,13 +43,13 @@ const PeopleList = props => {
 const style = StyleSheet.create(
     {
         container: {
-            backgroundColor: '#e2f977'
+            backgroundColor: '#FAFAFC'
         },
         headerStyle: {
             flex: 1,
             height: 50,
             width: '100%',
-            backgroundColor: "#e2a977",
+            backgroundColor: "#a1f254e6",
             justifyContent: "center",
             alignItems: 'center'
         },
