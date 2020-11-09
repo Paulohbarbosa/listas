@@ -27,7 +27,7 @@ const PeopleList = props => {
 
     return (
         <View style={style.container}>
-            <SafeAreaView >
+            <SafeAreaView>
                 <FlatList
                     data={peoples}
                     renderItem={renderItem}

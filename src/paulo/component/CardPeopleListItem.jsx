@@ -8,7 +8,9 @@ const PeopleListItem = (props) => {
     const { first, last } = people.name
     return (
 
-        <View style={{ padding: 5, flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+        //style={{ padding: 5, flex: 1, flexDirection: 'row', justifyContent: 'center' }}
+
+        <View style={{ padding: 5}}>
             <TouchableOpacity onPress={() => {onPressItemDetails(people)}} >
                 <Card style={{ elevation: 5, width: 150, height: 200 }}>
                     <Card.Content style={{ alignItems:'center' }}>
