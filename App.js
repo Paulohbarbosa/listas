@@ -2,8 +2,8 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import {NavigationContainer, StackActions} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-import PeopleDetailsPage from './src/paulo/pages/PeopleDetailsPage';
-import PeoplePage  from './src/paulo/pages/PeoplePage'
+import PeopleDetailsPage from './src/vagner/pages/PeopleDetailsPage';
+import PeoplePage  from './src/vagner/pages/PeoplePage'
 const Stack = createStackNavigator();
 
 function App(){
