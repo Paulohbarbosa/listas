@@ -2,17 +2,17 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import {NavigationContainer, StackActions} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-import PeopleDetailsPage from './src/vagner/pages/PeopleDetailsPage';
-import PeoplePage  from './src/vagner/pages/PeoplePage'
+import CovidDetailsPage from './src/vagner/pages/CovidDetailsPage';
+import CovidPage  from './src/vagner/pages/CovidPage'
 const Stack = createStackNavigator();
 
 function App(){
   return(
     <View style={style.container}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="PeoplePage">
-          <Stack.Screen name="Lista de Pessoas" component={PeoplePage} />
-          <Stack.Screen name="Detalhe da Pessoa" component={PeopleDetailsPage} />
+        <Stack.Navigator initialRouteName="CovidPage">
+          <Stack.Screen name="Lista de Países" component={CovidPage} />
+          <Stack.Screen name="Detalhe do País" component={CovidDetailsPage} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
