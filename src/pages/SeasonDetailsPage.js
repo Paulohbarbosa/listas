@@ -15,15 +15,15 @@ export default class SeasonDetailsPage extends React.Component{
     render(){
         var imagem = this.state.casos.image.original
         return(
-            <ScrollView style={styles.scrollView}>
-            <View>
+            <ScrollView style={styles.scrollView}>           
+             <View style={styles.container1}>             
                 <Text>url: {this.state.casos.url}</Text>
                 <Text>Nome: {this.state.casos.name}</Text>
                 <Text>Temporada: {this.state.casos.season}</Text>
-                <Text>data de exibição: {this.state.casos.airdate}</Text>
+                <Text>Data de exibição: {this.state.casos.airdate}</Text>
                 <Text>Resumo: {this.state.casos.summary}</Text>
-                <Image style={{height: 400, width: 400}}  source={{uri:imagem}}/>
-            </View>
+                <Image style={{height: 200, width: 200}} source={{uri:imagem}}/>
+            </View>          
             </ScrollView>
         )
     }
@@ -38,6 +38,13 @@ const styles = StyleSheet.create({
     },
     scrollView: {
         backgroundColor: '#FAFAFC',
-      }
+      },
+      container1: {
+        flexDirection: "row",
+        backgroundColor: '#e2f977',
+        alignItems: 'left'
+    },
 }
+
+
 )

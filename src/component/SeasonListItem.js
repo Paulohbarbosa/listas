@@ -5,12 +5,14 @@ import {toUpperFirst} from '../util'
 const SeasonListItem = props => {
     const {casos, onPressItemDetails} = props
      const {id} = casos.id
+     var imagem = casos.image.original
     return(
         <TouchableOpacity onPress={() => {
             onPressItemDetails(casos)
         }} >
+            
          <View style={style.line}>
-               <Image style={style.avatar} source={{uri: casos.image.thumbnail}} /> 
+               { <Image style={{height: 40, width: 40}} source={{uri:imagem}}/>   }
                 <Text style={style.lineText} key={id}> 
                 {`${casos.name}`}
                 </Text>

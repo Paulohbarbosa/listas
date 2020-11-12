@@ -11,7 +11,7 @@ function App(){
   return(
     <View style={style.container}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="CovidPage"> 
+        <Stack.Navigator initialRouteName="SeasonPage"> 
             { <Stack.Screen name="Série: Under the Dome" component={SeasonPage} /> }
              { <Stack.Screen name="Detalhe da temporada" component={SeasonDetailsPage} /> }
         </Stack.Navigator>
