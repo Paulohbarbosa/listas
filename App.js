@@ -1,32 +1,25 @@
+import 'react-native-gesture-handler'
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import {NavigationContainer, StackActions} from '@react-navigation/native'
-import {createStackNavigator} from '@react-navigation/stack'
-import {createDrawerNavigator} from '@react-navigation/drawer'
-import PeopleDetailsPage from './src/pages/PeopleDetailsPage';
-import PeoplePage  from './src/pages/PeoplePage'
-const Stack = createStackNavigator();
-//const Drawer = createDrawerNavigator();
-function App(){
-  return(
-    <View style={style.container}>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="PeoplePage">
-          <Stack.Screen name="Lista de Pessoas" component={PeoplePage} />
-          <Stack.Screen name="Detalhe da Pessoa" component={PeopleDetailsPage} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
-  )
-}
+import {AppAuth, AppLoading} from 'expo'
+import {useFonts, Anton_400Regular} from "@expo-google-fonts/anton"
 
-const style = StyleSheet.create(
-  {
-    container: {
-      flex: 1,
-      backgroundColor: '#fff' 
-    }
+import Routes from './src/router'
+
+export default function App() {
+
+  let [fontsLoaded] = useFonts({
+    Anton_400Regular,
+  })
+
+  if(!fontsLoaded){
+    return <AppLoading/>
   }
-)
 
-export default App;
+  return (
+    <>
+      <StatusBar style="light" backgroundColor='#000' />
+      <Routes/>
+    </>
+  );
+}

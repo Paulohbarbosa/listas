@@ -8,16 +8,16 @@ export default class PeopleDetailsPage extends React.Component{
         super(props)
         this.state = {
             "people": props.route.params.people,
-            key:'0'
         }
     }
-//<Image style={style.avatar} source={{uri: people.picture.large}}></Image>
+
     render(){
         var imagem = this.state.people.picture.large
         return(
             <ScrollView style={styles.scrollView}>
-            <View>
-                <Text>Nome: {this.state.people.name.first} {this.state.people.name.last}</Text>
+            <View style={{alignItems:'center'}}>
+                <Image style={styles.imagem}  source={{uri:imagem}}/>
+                <Text style={styles.textoPrin}>Nome: {this.state.people.name.first} {this.state.people.name.last}</Text>
                 <Text>Cidade: {this.state.people.location.city} - {this.state.people.location.state}</Text>
                 <Text>
                     Rua: {this.state.people.location.street.name}, 
@@ -25,7 +25,6 @@ export default class PeopleDetailsPage extends React.Component{
                 </Text>
                 <Text>E-mail: {this.state.people.email}</Text>
                 <Text>Tel.: {this.state.people.phone}</Text>
-                <Image style={{height: 400, width: 400}}  source={{uri:imagem}}/>
             </View>
             </ScrollView>
         )
@@ -33,14 +32,24 @@ export default class PeopleDetailsPage extends React.Component{
 }
 
 const styles = StyleSheet.create({
-    avatar: {
-        aspectRatio: 1,
-        marginLeft: 10,
-        flex: 1,
-        borderRadius: 50
-    },
     scrollView: {
         backgroundColor: '#FAFAFC',
-      }
+        padding: 20,
+    },
+    imagem:{
+        width: 400,
+        height: 400,
+    },
+    card:{
+        width: 321,
+        height: 85,
+        left: 19,
+        top: 46,
+    },
+    textoPrin:{
+        width: 196,
+        height: 21,
+        left: 52,
+    }
 }
 )
