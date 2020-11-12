@@ -13,6 +13,7 @@ export default class CasosDetailsPage extends React.Component{
     }
 
     render(){
+        var imagem = this.state.casos.image.original
         return(
             <ScrollView style={styles.scrollView}>
             <View>
@@ -20,7 +21,7 @@ export default class CasosDetailsPage extends React.Component{
                 <Text>Name: {this.state.casos.name}</Text>
                 <Text>Season: {this.state.casos.season}</Text>
                 <Text>airdate: {this.state.casos.airdate}</Text>
-
+                <Image style={{height: 400, width: 400}}  source={{uri:imagem}}/>
             </View>
             </ScrollView>
         )
