@@ -14,7 +14,7 @@ export default class CovidPage extends React.Component{
   componentDidMount(){
     axios
     // .get('https://covid19-brazil-api.now.sh/api/report/v1')
-      .get('http://api.tvmaze.com/seasons/1/episodes')
+      .get('http://api.tvmaze.com/shows/1/crew')
     .then(response => {
       // const {data} = response.data
       this.setState({
@@ -29,7 +29,7 @@ export default class CovidPage extends React.Component{
         <View>
         <CasosList casos={this.state.casos} 
                      onPressItem={ (casos) => {
-                         this.props.navigation.navigate('Detalhe do caso',
+                         this.props.navigation.navigate('Detalhe do Profissional',
                          {"casos": casos})
                      }}
         />

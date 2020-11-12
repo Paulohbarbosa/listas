@@ -13,14 +13,16 @@ export default class CasosDetailsPage extends React.Component{
     }
 
     render(){
-        var imagem = this.state.casos.image.original
+        var imagem = this.state.casos.person.image.original
         return(
             <ScrollView style={styles.scrollView}>
-            <View>
-                <Text>url: {this.state.casos.url}</Text>
-                <Text>Name: {this.state.casos.name}</Text>
-                <Text>Season: {this.state.casos.season}</Text>
-                <Text>airdate: {this.state.casos.airdate}</Text>
+                <View>                   
+                <Text>Type: {this.state.casos.type}</Text>                     
+                <Text>url: {this.state.casos.person.url}</Text>                    
+                <Text>Name: {this.state.casos.person.name}</Text>
+                    <Text>Country: {this.state.casos.person.country.name}</Text>
+                    <Text>Timezone: {this.state.casos.person.country.timezone}</Text>
+                <Text>birthday: {this.state.casos.person.birthday}</Text>
                 <Image style={{height: 400, width: 400}}  source={{uri:imagem}}/>
             </View>
             </ScrollView>
