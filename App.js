@@ -15,9 +15,9 @@ function App(){
       <NavigationContainer>
         <Stack.Navigator initialRouteName="CovidPage"> 
           {/* <Stack.Screen name="Lista de Pessoas" component={PeoplePage} /> */}
-            { <Stack.Screen name="Lista de Casos" component={CovidPage} /> }
+            { <Stack.Screen name="Lista de Países" component={CovidPage} /> }
           {/* <Stack.Screen name="Detalhe da Pessoa" component={PeopleDetailsPage} /> */}
-             { <Stack.Screen name="Detalhe do caso" component={CasosDetailsPage} /> }
+             { <Stack.Screen name="Detalhe do País" component={CasosDetailsPage} /> }
         </Stack.Navigator>
       </NavigationContainer>
     </View>

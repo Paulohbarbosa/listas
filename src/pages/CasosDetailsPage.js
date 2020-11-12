@@ -16,7 +16,7 @@ export default class CasosDetailsPage extends React.Component{
         return(
             <ScrollView style={styles.scrollView}>
             <View>
-                <Text>uf: {this.state.casos.uf}</Text>
+                <Text>country: {this.state.casos.country}</Text>
                 <Text>deaths: {this.state.casos.deaths}</Text>
             </View>
             </ScrollView>

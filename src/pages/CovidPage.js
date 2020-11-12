@@ -13,7 +13,7 @@ export default class CovidPage extends React.Component{
  
   componentDidMount(){
     axios
-    .get('https://covid19-brazil-api.now.sh/api/report/v1')
+    .get('https://covid19-brazil-api.now.sh/api/report/v1/countries')
     .then(response => {
       const {data} = response.data
       this.setState({
