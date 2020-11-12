@@ -1,15 +1,15 @@
 import React from 'react'
 import {View, StyleSheet, SafeAreaView, FlatList, Text} from 'react-native'
-import PeopleListItem from './PeopleListItem'
+import SeasonListItem from './SeasonListItem'
 
-const PeopleList = props => {
-    const {peoples, onPressItem} = props
+const SeasonList = props => {
+    const {casos, onPressItem} = props
 
     const renderItem = ({item}) => {
         return (
-            <PeopleListItem 
-                key={item.name.first} 
-                people={item}
+            <SeasonListItem 
+                key={item.id} 
+                casos={item}
                 onPressItemDetails={onPressItem}
             />
         )
@@ -19,7 +19,7 @@ const PeopleList = props => {
         return (
             <View style={style.headerStyle}>
                 <Text style={style.titleStyle}>
-                    Pessoas
+                    Temporadas
                 </Text>
             </View>
         )
@@ -29,9 +29,9 @@ const PeopleList = props => {
         <View style={style.container}>
             <SafeAreaView>
                 <FlatList
-                    data={peoples}
+                    data={casos}
                     renderItem={renderItem}
-                    keyExtractor={(item) => {item.name.first}}
+                    keyExtractor={(item) => {item.id}}
                     ListHeaderComponent={header}
                     stickyHeaderIndices={[0]}
                 />
@@ -60,4 +60,4 @@ const style = StyleSheet.create(
     }
 )
 
-export default PeopleList
+export default SeasonList

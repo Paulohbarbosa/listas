@@ -2,7 +2,7 @@ import React from 'react'
 import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native'
 import {toUpperFirst} from '../util'
 
-const CasosListItem = props => {
+const SeasonListItem = props => {
     const {casos, onPressItemDetails} = props
      const {id} = casos.id
     return(
@@ -10,6 +10,7 @@ const CasosListItem = props => {
             onPressItemDetails(casos)
         }} >
          <View style={style.line}>
+               <Image style={style.avatar} source={{uri: casos.image.thumbnail}} /> 
                 <Text style={style.lineText} key={id}> 
                 {`${casos.name}`}
                 </Text>
@@ -40,4 +41,4 @@ const style = StyleSheet.create({
         }
     }
 )
-export default CasosListItem
+export default SeasonListItem

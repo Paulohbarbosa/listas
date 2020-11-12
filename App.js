@@ -3,10 +3,8 @@ import { View, StyleSheet } from 'react-native';
 import {NavigationContainer, StackActions} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import {createDrawerNavigator} from '@react-navigation/drawer'
-import PeopleDetailsPage from './src/pages/PeopleDetailsPage';
-import PeoplePage  from './src/pages/PeoplePage'
-import CasosDetailsPage from './src/pages/CasosDetailsPage';
-import CovidPage  from './src/pages/CovidPage'
+import SeasonDetailsPage from './src/pages/SeasonDetailsPage';
+import SeasonPage  from './src/pages/SeasonPage'
 const Stack = createStackNavigator();
 //const Drawer = createDrawerNavigator();
 function App(){
@@ -14,10 +12,8 @@ function App(){
     <View style={style.container}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="CovidPage"> 
-          {/* <Stack.Screen name="Lista de Pessoas" component={PeoplePage} /> */}
-            { <Stack.Screen name="Lista de Casos" component={CovidPage} /> }
-          {/* <Stack.Screen name="Detalhe da Pessoa" component={PeopleDetailsPage} /> */}
-             { <Stack.Screen name="Detalhe do caso" component={CasosDetailsPage} /> }
+            { <Stack.Screen name="Série: Under the Dome" component={SeasonPage} /> }
+             { <Stack.Screen name="Detalhe do caso" component={SeasonDetailsPage} /> }
         </Stack.Navigator>
       </NavigationContainer>
     </View>

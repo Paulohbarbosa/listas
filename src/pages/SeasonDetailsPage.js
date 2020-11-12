@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, Image, StyleSheet} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 
-export default class CasosDetailsPage extends React.Component{
+export default class SeasonDetailsPage extends React.Component{
     
     constructor(props){
         super(props)
@@ -18,9 +18,10 @@ export default class CasosDetailsPage extends React.Component{
             <ScrollView style={styles.scrollView}>
             <View>
                 <Text>url: {this.state.casos.url}</Text>
-                <Text>Name: {this.state.casos.name}</Text>
-                <Text>Season: {this.state.casos.season}</Text>
-                <Text>airdate: {this.state.casos.airdate}</Text>
+                <Text>Nome: {this.state.casos.name}</Text>
+                <Text>Temporada: {this.state.casos.season}</Text>
+                <Text>data de exibição: {this.state.casos.airdate}</Text>
+                <Text>Resumo: {this.state.casos.summary}</Text>
                 <Image style={{height: 400, width: 400}}  source={{uri:imagem}}/>
             </View>
             </ScrollView>

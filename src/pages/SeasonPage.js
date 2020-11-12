@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import axios from 'axios';
-import CasosList from '../component/CasosList'
+import SeasonList from '../component/SeasonList'
 
-export default class CovidPage extends React.Component{
+export default class SeasonPage extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -27,7 +27,7 @@ export default class CovidPage extends React.Component{
   render(){
     return (
         <View>
-        <CasosList casos={this.state.casos} 
+        <SeasonList casos={this.state.casos} 
                      onPressItem={ (casos) => {
                          this.props.navigation.navigate('Detalhe do caso',
                          {"casos": casos})
