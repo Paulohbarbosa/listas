@@ -8,7 +8,7 @@ const CasosList = props => {
     const renderItem = ({item}) => {
         return (
             <CasosListItem 
-                key={item.uf} 
+                key={item.id} 
                 casos={item}
                 onPressItemDetails={onPressItem}
             />
@@ -31,7 +31,7 @@ const CasosList = props => {
                 <FlatList
                     data={casos}
                     renderItem={renderItem}
-                    keyExtractor={(item) => {item.uid}}
+                    keyExtractor={(item) => {item.id}}
                     ListHeaderComponent={header}
                     stickyHeaderIndices={[0]}
                 />

@@ -4,14 +4,14 @@ import {toUpperFirst} from '../util'
 
 const CasosListItem = props => {
     const {casos, onPressItemDetails} = props
-     const {uid} = casos.uid
+     const {id} = casos.id
     return(
         <TouchableOpacity onPress={() => {
             onPressItemDetails(casos)
         }} >
          <View style={style.line}>
-                <Text style={style.lineText} key={uid}> 
-                {`${casos.uf}`}
+                <Text style={style.lineText} key={id}> 
+                {`${casos.name}`}
                 </Text>
             </View>
         </TouchableOpacity>
