@@ -13,7 +13,7 @@ function App(){
       <NavigationContainer>
         <Stack.Navigator initialRouteName="SeasonPage"> 
             { <Stack.Screen name="Série: Under the Dome" component={SeasonPage} /> }
-             { <Stack.Screen name="Detalhe da temporada" component={SeasonDetailsPage} /> }
+             { <Stack.Screen name="Detalhe do epsódio" component={SeasonDetailsPage} /> }
         </Stack.Navigator>
       </NavigationContainer>
     </View>

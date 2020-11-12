@@ -1,20 +1,20 @@
 import React from 'react'
 import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native'
-import {toUpperFirst} from '../util'
+
 
 const SeasonListItem = props => {
-    const {casos, onPressItemDetails} = props
-     const {id} = casos.id
-     var imagem = casos.image.original
+    const {seasons, onPressItemDetails} = props
+     const {id} = seasons.id
+     var imagem = seasons.image.medium
     return(
         <TouchableOpacity onPress={() => {
-            onPressItemDetails(casos)
+            onPressItemDetails(seasons)
         }} >
             
-         <View style={style.line}>
+          <View style={style.line}>
                { <Image style={{height: 40, width: 40}} source={{uri:imagem}}/>   }
                 <Text style={style.lineText} key={id}> 
-                {`${casos.name}`}
+                {`${seasons.number + '. ' + seasons.name}`}
                 </Text>
             </View>
         </TouchableOpacity>
@@ -23,13 +23,13 @@ const SeasonListItem = props => {
 }
 
 const style = StyleSheet.create({
-        line: {
-            height:60,
-            borderBottomWidth: 1,
-            borderBottomColor: '#bbb',
-            alignItems: 'center',
-            flexDirection: 'row'
-        },
+         line: {
+             height:60,
+             borderBottomWidth: 3,
+             borderBottomColor: 'gray',
+             alignItems: 'center',
+             flexDirection: 'row'
+         },
         avatar: {
             aspectRatio: 1,
             marginLeft: 10,
@@ -39,7 +39,8 @@ const style = StyleSheet.create({
         lineText: {
             fontSize: 20,
             paddingLeft: 20,
-            flex: 7
+            flex: 7,
+            color: 'white'
         }
     }
 )

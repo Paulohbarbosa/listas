@@ -3,13 +3,13 @@ import {View, StyleSheet, SafeAreaView, FlatList, Text} from 'react-native'
 import SeasonListItem from './SeasonListItem'
 
 const SeasonList = props => {
-    const {casos, onPressItem} = props
+    const {seasons, onPressItem} = props
 
     const renderItem = ({item}) => {
         return (
             <SeasonListItem 
                 key={item.id} 
-                casos={item}
+                seasons={item}
                 onPressItemDetails={onPressItem}
             />
         )
@@ -29,7 +29,7 @@ const SeasonList = props => {
         <View style={style.container}>
             <SafeAreaView>
                 <FlatList
-                    data={casos}
+                    data={seasons}
                     renderItem={renderItem}
                     keyExtractor={(item) => {item.id}}
                     ListHeaderComponent={header}
@@ -43,18 +43,18 @@ const SeasonList = props => {
 const style = StyleSheet.create(
     {
         container: {
-            backgroundColor: '#e2f977'
+            backgroundColor: 'black',
         },
         headerStyle: {
             flex: 1,
             height: 50,
             width: '100%',
-            backgroundColor: "#e2a977",
+            backgroundColor: "gray",
             justifyContent: "center",
             alignItems: 'center'
         },
         titleStyle: {
-            color: '#000',
+            color: 'white',
             fontSize: 30
         }
     }
