@@ -3,8 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import {NavigationContainer, StackActions} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import {createDrawerNavigator} from '@react-navigation/drawer'
-import PeopleDetailsPage from './src/pages/PeopleDetailsPage';
-import PeoplePage  from './src/pages/PeoplePage'
 import CasosDetailsPage from './src/pages/EquipeDetailsPage';
 import CovidPage  from './src/pages/EquipePage'
 const Stack = createStackNavigator();
