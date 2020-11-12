@@ -29,7 +29,7 @@ export default class SeasonPage extends React.Component{
         <View>
         <SeasonList casos={this.state.casos} 
                      onPressItem={ (casos) => {
-                         this.props.navigation.navigate('Detalhe do caso',
+                         this.props.navigation.navigate('Detalhe da temporada',
                          {"casos": casos})
                      }}
         />
