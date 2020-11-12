@@ -5,8 +5,8 @@ import {createStackNavigator} from '@react-navigation/stack'
 import {createDrawerNavigator} from '@react-navigation/drawer'
 import PeopleDetailsPage from './src/pages/PeopleDetailsPage';
 import PeoplePage  from './src/pages/PeoplePage'
-import CasosDetailsPage from './src/pages/CasosDetailsPage';
-import CovidPage  from './src/pages/CovidPage'
+import CasosDetailsPage from './src/pages/EquipeDetailsPage';
+import CovidPage  from './src/pages/EquipePage'
 const Stack = createStackNavigator();
 //const Drawer = createDrawerNavigator();
 function App(){
@@ -15,7 +15,7 @@ function App(){
       <NavigationContainer>
         <Stack.Navigator initialRouteName="CovidPage"> 
           {/* <Stack.Screen name="Lista de Pessoas" component={PeoplePage} /> */}
-            { <Stack.Screen name="Lista de Profissionais" component={CovidPage} /> }
+            { <Stack.Screen name="Equipe" component={CovidPage} /> }
           {/* <Stack.Screen name="Detalhe da Pessoa" component={PeopleDetailsPage} /> */}
              { <Stack.Screen name="Detalhe do Profissional" component={CasosDetailsPage} /> }
         </Stack.Navigator>

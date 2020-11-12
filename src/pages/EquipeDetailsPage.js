@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, Image, StyleSheet} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 
-export default class CasosDetailsPage extends React.Component{
+export default class EquipeDetailsPage extends React.Component{
     
     constructor(props){
         super(props)

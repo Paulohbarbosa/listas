@@ -1,8 +1,8 @@
 import React from 'react'
 import {View, StyleSheet, SafeAreaView, FlatList, Text} from 'react-native'
-import CasosListItem from './CasosListItem'
+import CasosListItem from './EquipeListItem'
 
-const CasosList = props => {
+const EquipeList = props => {
     const {casos, onPressItem} = props
 
     const renderItem = ({item}) => {
@@ -19,7 +19,7 @@ const CasosList = props => {
         return (
             <View style={style.headerStyle}>
                 <Text style={style.titleStyle}>
-                    Casos
+                    Profissionais
                 </Text>
             </View>
         )
@@ -60,4 +60,4 @@ const style = StyleSheet.create(
     }
 )
 
-export default CasosList
+export default EquipeList

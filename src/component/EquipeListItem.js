@@ -2,7 +2,7 @@ import React from 'react'
 import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native'
 import {toUpperFirst} from '../util'
 
-const CasosListItem = props => {
+const EquipeListItem = props => {
     const {casos, onPressItemDetails} = props
      const {id} = casos.person.id
     return(
@@ -40,4 +40,4 @@ const style = StyleSheet.create({
         }
     }
 )
-export default CasosListItem
+export default EquipeListItem

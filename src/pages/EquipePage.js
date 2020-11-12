@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import axios from 'axios';
-import CasosList from '../component/CasosList'
+import CasosList from '../component/EquipeList'
 
 export default class CovidPage extends React.Component{
   constructor(props){
