@@ -11,17 +11,7 @@ export default class EquipeDetailsPage extends React.Component{
             key:'0'
         }
     }
-   /* filterDes(teste) {
-         if (teste === false) {
-            return teste == 'Não informado';
-        }
-        // else if (birthday != 'null') {
-            // return birthday;
-        // } 
-            // return `${country.substring(0)}Não informado`;
-            
-    }*/
- 
+
     render(){
         var imagem = this.state.casos.person.image  
         
