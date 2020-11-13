@@ -6,6 +6,9 @@ import Home from './home'
 import ListPessoas from './paulo/pages/pessoas'
 import DetalhesPessoa from './paulo/pages/detalhes'
 
+import SeasonDetailsPage from './izadora/pages/SeasonDetailsPage'
+import SeasonPage from './izadora/pages/SeasonPage'
+
 const Stack = createStackNavigator();
 
 function Routes(){
@@ -15,6 +18,8 @@ function Routes(){
                 <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
                 <Stack.Screen name="Pessoas" component={ListPessoas}/>
                 <Stack.Screen name="Detalhes da Pessoa" component={DetalhesPessoa}/>
+                <Stack.Screen name="Epsódios" component={SeasonPage} /> 
+                <Stack.Screen name="Detalhe do epsódio" component={SeasonDetailsPage} /> 
             </Stack.Navigator>
         </NavigationContainer>
     )
