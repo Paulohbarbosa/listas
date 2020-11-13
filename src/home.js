@@ -21,8 +21,8 @@ export default function Home(){
                     <Cards by="Paulo Barbosa"  onClick={()=> navigation.navigate('Pessoas')}>
                         Lista Pessoas
                     </Cards>
-                    <Cards by="Paulo"  onClick={()=> navigation.navigate('Pessoas')}>
-                        Estados
+                    <Cards by="Izadora Paim"  onClick={()=> navigation.navigate('Epsódios')}>
+                        Lista epsódios
                     </Cards>
                     <Cards by="Paulo"  onClick={()=> navigation.navigate('Pessoas')}>
                         Estados 1
