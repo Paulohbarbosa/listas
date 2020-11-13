@@ -24,8 +24,7 @@ export default class EquipeDetailsPage extends React.Component{
                 <Text>Country: {this.state.casos.person.country === null ? "Sem informação." : this.state.casos.person.country.name }</Text>                    
                 <Text>Timezone: {this.state.casos.person.country === null ? "Sem informação." : this.state.casos.person.country.timezone}</Text>                     
                 <Text>birthday: {this.state.casos.person.birthday === null ? "Sem informação." : this.state.casos.person.birthday}</Text>               
-                {imagem != null && (<Image style={{ height: 400, width: 400 }} source={{ uri: imagem.original }} />)}
-                    
+                {imagem != null && (<Image style={{ height: 400, width: 400 }} source={{ uri: imagem.original }} />)}                    
             </View>
             </ScrollView>
         )
