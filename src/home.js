@@ -19,19 +19,16 @@ export default function Home(){
             <ScrollView>
                 <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <Cards by="Paulo Barbosa"  onClick={()=> navigation.navigate('Pessoas')}>
-                        Lista Pessoas
+                        Elenco
                     </Cards>
                     <Cards by="Izadora Paim"  onClick={()=> navigation.navigate('Epsódios')}>
-                        Lista epsódios
+                      Epsódios
                     </Cards>
                 </View>
                 <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                    <Cards by="Paulo Barbosa"  onClick={()=> navigation.navigate('Pessoas')}>
-                        Lista Pessoas
-                    </Cards>
-                    <Cards by="Paulo"  onClick={()=> navigation.navigate('Pessoas')}>
-                        Estados
-                    </Cards>
+                    <Cards by="Vagner Rubens"  onClick={()=> navigation.navigate('Equipe')}>
+                        Direção
+                    </Cards>                    
                 </View>
                 
                 
