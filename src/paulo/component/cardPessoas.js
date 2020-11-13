@@ -19,8 +19,8 @@ const PeopleListItem = (props) => {
         <TouchableOpacity style={styles.container} onPress={() => {onPressItemDetails(people)}}>
             <View style={styles.card} key={id}>
                 <Avatar.Image size={100} source={{ uri: people.person.image.medium }} />
-                <Title>{people.person.name}</Title>
-                <Paragraph>{newstr}</Paragraph>
+                <Title style={styles.text}>{people.person.name}</Title>
+                <Paragraph style={styles.text}>{newstr}</Paragraph>
             </View>
         </TouchableOpacity>
     )
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 
         elevation: 2,
     },
-    shoesText: {
-        fontSize: 16
+    text: {
+        fontFamily: 'Anton_400Regular'
     }
 })
