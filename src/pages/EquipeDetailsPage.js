@@ -11,19 +11,31 @@ export default class EquipeDetailsPage extends React.Component{
             key:'0'
         }
     }
-
+   /* filterDes(teste) {
+         if (teste === false) {
+            return teste == 'Não informado';
+        }
+        // else if (birthday != 'null') {
+            // return birthday;
+        // } 
+            // return `${country.substring(0)}Não informado`;
+            
+    }*/
+ 
     render(){
-        var imagem = this.state.casos.person.image.original
+        var imagem = this.state.casos.person.image  
+        
         return(
             <ScrollView style={styles.scrollView}>
                 <View>                   
                 <Text>Type: {this.state.casos.type}</Text>                     
                 <Text>url: {this.state.casos.person.url}</Text>                    
                 <Text>Name: {this.state.casos.person.name}</Text>
-                    <Text>Country: {this.state.casos.person.country.name}</Text>
-                    <Text>Timezone: {this.state.casos.person.country.timezone}</Text>
-                <Text>birthday: {this.state.casos.person.birthday}</Text>
-                <Image style={{height: 400, width: 400}}  source={{uri:imagem}}/>
+                <Text>Country: {this.state.casos.person.country === null ? "Sem informação." : this.state.casos.person.country.name }</Text>                    
+                <Text>Timezone: {this.state.casos.person.country === null ? "Sem informação." : this.state.casos.person.country.timezone}</Text>                     
+                <Text>birthday: {this.state.casos.person.birthday === null ? "Sem informação." : this.state.casos.person.birthday}</Text>               
+                {imagem != null && (<Image style={{ height: 400, width: 400 }} source={{ uri: imagem.original }} />)}
+                    
             </View>
             </ScrollView>
         )
