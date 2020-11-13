@@ -17,17 +17,23 @@ export default function Home(){
             </View>
 
             <ScrollView>
-                <View style={{flexDirection: 'Column', justifyContent: 'center', alignItems: 'center'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <Cards by="Paulo Barbosa"  onClick={()=> navigation.navigate('Pessoas')}>
                         Lista Pessoas
                     </Cards>
                     <Cards by="Paulo"  onClick={()=> navigation.navigate('Pessoas')}>
                         Estados
                     </Cards>
+                </View>
+                <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                    <Cards by="Paulo Barbosa"  onClick={()=> navigation.navigate('Pessoas')}>
+                        Lista Pessoas
+                    </Cards>
                     <Cards by="Paulo"  onClick={()=> navigation.navigate('Pessoas')}>
-                        Estados 1
+                        Estados
                     </Cards>
                 </View>
+                
                 
             </ScrollView>
 

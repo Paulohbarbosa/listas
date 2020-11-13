@@ -17,11 +17,12 @@ export default class Pessoas extends React.Component {
   
     componentDidMount() {
       axios
-        .get('https://randomuser.me/api/?nat=br&results=20')
+        .get('http://api.tvmaze.com/shows/1/cast')
         .then(response => {
-          const { results } = response.data
+          //const { results } = response.data
           this.setState({
-            peoples: results
+            //peoples: results
+            peoples: response.data
           })
         })
     }
@@ -39,11 +40,10 @@ export default class Pessoas extends React.Component {
                      </TouchableOpacity>
                  </View>
             </View>
-            {/* colocar a listagem */}
             <ScrollView>
                 <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-                    <Lista peoples={this.state.peoples} onPressItem={(people) => {this.props.navigation.navigate('Detalhes da Pessoa',
-                    { "people": people })}} />                   
+                    <Lista peoples={this.state.peoples} onPressItem={(peoples) => {this.props.navigation.navigate('Detalhes da Pessoa',
+                    { "people": peoples })}} />                   
                 </View>
             </ScrollView>
         </View>

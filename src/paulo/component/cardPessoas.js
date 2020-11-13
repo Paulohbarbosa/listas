@@ -4,14 +4,23 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
 
 const PeopleListItem = (props) => {
     const { people, onPressItemDetails } = props
-    const { first, last } = people.name
+    const { id } = people.person.id
+
+    const str = people.person.gender
+    var newstr;
+    if(str == "Male"){
+        newstr = "Ator";
+    }else{
+        newstr = "Atriz";
+    }
+    
 
     return (
         <TouchableOpacity style={styles.container} onPress={() => {onPressItemDetails(people)}}>
-            <View style={styles.card}>
-                <Avatar.Image size={100} source={{ uri: people.picture.medium }} />
-                <Title>{first}</Title>
-                <Paragraph>{last}</Paragraph>
+            <View style={styles.card} key={id}>
+                <Avatar.Image size={100} source={{ uri: people.person.image.medium }} />
+                <Title>{people.person.name}</Title>
+                <Paragraph>{newstr}</Paragraph>
             </View>
         </TouchableOpacity>
     )

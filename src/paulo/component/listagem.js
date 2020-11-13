@@ -8,7 +8,7 @@ const listagem = props => {
   const renderItem = ({ item }) => {
     return (
       <CardPessoas
-        key={item.name.first}
+        key={item.id}
         people={item}
         onPressItemDetails={onPressItem}
       />
