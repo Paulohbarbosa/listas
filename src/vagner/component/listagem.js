@@ -3,13 +3,13 @@ import { SafeAreaView, View, FlatList, TouchableOpacity, StyleSheet, Text, Statu
 import CardPessoas from './cardPessoas'
 
 const listagem = props => {
-  const { peoples, onPressItem } = props
+  const { equipe, onPressItem } = props
 
   const renderItem = ({ item }) => {
     return (
       <CardPessoas
         key={item.id}
-        people={item}
+        equipe={item}
         onPressItemDetails={onPressItem}
       />
     )
@@ -18,7 +18,7 @@ const listagem = props => {
     return (
       <SafeAreaView>
         <FlatList
-          data={peoples}
+          data={equipe}
           renderItem={renderItem}
           keyExtractor={item => item.id}
           horizontal={false}

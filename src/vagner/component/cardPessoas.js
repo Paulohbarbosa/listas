@@ -2,30 +2,22 @@ import React from 'react'
 import { Card, Title, Paragraph, Avatar } from 'react-native-paper';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
 
-const PeopleListItem = (props) => {
-    const { people, onPressItemDetails } = props
-    const { id } = people.person.id
+const EquipeListItem = (props) => {
+    const { equipe, onPressItemDetails } = props
+    const { id } = equipe.person.id
 
-    const str = people.person.gender
-    var newstr;
-    if(str == "Male"){
-        newstr = "Ator";
-    }else{
-        newstr = "Atriz";
-    }
-    
-
+    var imagem =  equipe.person.image.medium  
     return (
-        <TouchableOpacity style={styles.container} onPress={() => {onPressItemDetails(people)}}>
+        <TouchableOpacity style={styles.container} onPress={() => {onPressItemDetails(equipe)}}>
             <View style={styles.card} key={id}>
-                <Avatar.Image size={100} source={{ uri: people.person.image.medium }} />
-                <Title style={styles.text}>{people.person.name}</Title>
-                <Paragraph style={styles.text}>{newstr}</Paragraph>
+                {imagem != null && (<Avatar.Image size={100} source={{uri: imagem.medium }} />)}               
+                <Title style={styles.text}>{equipe.person.name}</Title>
+                <Paragraph style={styles.text}>{equipe.person.type}</Paragraph>
             </View>
         </TouchableOpacity>
     )
 }
-export default PeopleListItem
+export default EquipeListItem
 
 const styles = StyleSheet.create({
     container: {

@@ -5,24 +5,20 @@ import {useNavigation} from '@react-navigation/native'
 import Lista from '../component/listagem'
 import axios from 'axios';
 
-// const navigation = useNavigation();
-
-export default class Pessoas extends React.Component {
+export default class EquipePage extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        peoples: [],
+        equipe: []
       }
     }
   
     componentDidMount() {
       axios
-        .get('http://api.tvmaze.com/shows/1/cast')
-        .then(response => {
-          //const { results } = response.data
-          this.setState({
-            //peoples: results
-            peoples: response.data
+        .get('http://api.tvmaze.com/shows/1/crew')
+        .then(response => {          
+          this.setState({           
+            equipe: response.data
           })
         })
     }
@@ -34,7 +30,7 @@ export default class Pessoas extends React.Component {
 
                  <View style={styles.textContainer}>
                      <Text style={styles.text}>Lista</Text>
-                     <Text style={[styles.text,{color: '#cececf'}]}>Pessoas</Text>
+                     <Text style={[styles.text,{color: '#cececf'}]}>Direção</Text>
                      <TouchableOpacity style={{position: 'absolute', right: 0, alignSelf: 'center'}}>
                          <MaterialIcons name="filter-list" size={24} color="#000"/>
                      </TouchableOpacity>
@@ -42,8 +38,8 @@ export default class Pessoas extends React.Component {
             </View>
             <ScrollView>
                 <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-                    <Lista peoples={this.state.peoples} onPressItem={(peoples) => {this.props.navigation.navigate('Detalhes da Pessoa',
-                    { "people": peoples })}} />                   
+                    <Lista equipe={this.state.equipe} onPressItem={(equipe) => {this.props.navigation.navigate('Detalhes do Profissional',
+                    { "equipe": equipe })}} />                   
                 </View>
             </ScrollView>
         </View>
