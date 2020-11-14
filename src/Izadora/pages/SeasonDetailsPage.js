@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { MaterialIcons } from '@expo/vector-icons'
 
 export default class SeasonDetailsPage extends React.Component {
 
@@ -14,9 +15,16 @@ export default class SeasonDetailsPage extends React.Component {
 
     render() {
         var imagem = this.state.seasons.image.original
+
         const str = this.state.seasons.summary
         var newstr = str.replace('<p>', '');
         var newstr = newstr.replace('</p>', '');
+
+        const data = this.state.seasons.airdate
+        const ano = data.substring(0, 4);
+        const mes = data.substring(5, 7);
+        const dia = data.substring(8, 10);
+        var newData = `${dia}/${mes}/${ano}`;
 
         return (
 
@@ -26,16 +34,18 @@ export default class SeasonDetailsPage extends React.Component {
                         <Image source={imagem} style={styles.image}></Image>
                     </View>
                     <View style={{ justifyContent: 'space-around', paddingHorizontal: 50, paddingVertical: 25 }}>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={styles.textRotulo}>T</Text>
-                            <Text style={styles.text}>{this.state.seasons.season}</Text>
-                            <Text style={styles.textRotulo}>:E</Text>
-                            <Text style={styles.text}>{this.state.seasons.number}</Text>
-                        </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <View style={{ flexDirection: 'row' }}>
+                                <Text style={styles.textRotulo}>Título: </Text>
+                                <Text style={styles.text}>{this.state.seasons.name}</Text>
+                            </View>
 
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={styles.textRotulo}>Título: </Text>
-                            <Text style={styles.text}>{this.state.seasons.name}</Text>
+                            <View style={{ flexDirection: 'row' }}>
+                                <Text style={styles.textRotulo}>T</Text>
+                                <Text style={styles.text}>{this.state.seasons.season}</Text>
+                                <Text style={styles.textRotulo}>:E</Text>
+                                <Text style={styles.text}>{this.state.seasons.number}</Text>
+                            </View>
                         </View>
 
                         <View style={{ flexDirection: 'row' }}>
@@ -45,7 +55,7 @@ export default class SeasonDetailsPage extends React.Component {
 
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={styles.textRotulo}>Data de exibição: </Text>
-                            <Text style={styles.text}>{this.state.seasons.airdate}</Text>
+                            <Text style={styles.text}>{newData}</Text>
                         </View>
 
                         <View style={{ flexDirection: 'row' }}>
@@ -55,6 +65,9 @@ export default class SeasonDetailsPage extends React.Component {
 
                         <View style={{ flexDirection: 'row', width: 10 }}>
                             <Text style={styles.textRotulo}>URL: </Text>
+                            <TouchableOpacity style={{ position: 'absolute', right: 0, alignSelf: 'center' }}>
+                                <MaterialIcons name="http" size={24} color="white" />
+                            </TouchableOpacity>
                             <Text style={styles.text}>{this.state.seasons.url}</Text>
                         </View>
                     </View>
