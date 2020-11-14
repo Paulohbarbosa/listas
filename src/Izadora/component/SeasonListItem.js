@@ -26,7 +26,7 @@ const style = StyleSheet.create({
          line: {
              height:60,
              borderBottomWidth: 3,
-             borderBottomColor: 'gray',
+             borderBottomColor: '#bfbbbb',
              alignItems: 'center',
              flexDirection: 'row'
          },
