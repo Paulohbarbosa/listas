@@ -36,9 +36,9 @@ export default class SeasonPage extends React.Component{
                      </TouchableOpacity>
                  </View>
             </View>
-            {/* colocar a listagem */}
+            
             <ScrollView>
-                <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                     <SeasonList seasons={this.state.seasons} onPressItem={(seasons) => {this.props.navigation.navigate('Detalhe do epsódio',
                     { "seasons": seasons })}} />                   
                 </View>

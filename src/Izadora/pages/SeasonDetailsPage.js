@@ -34,7 +34,7 @@ export default class SeasonDetailsPage extends React.Component {
                     <View style={{ alignItems: 'center' }}>
                         <Image source={imagem} style={styles.image}></Image>
                     </View>
-                    <View style={{ justifyContent: 'space-around', paddingHorizontal: 50, paddingVertical: 25 }}>
+                    <View style={{ justifyContent: 'space-around', paddingHorizontal: 10, paddingVertical: 5 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <View style={{ flexDirection: 'row' }}>
                                 <Text style={styles.textRotulo}>Título: </Text>
@@ -50,8 +50,8 @@ export default class SeasonDetailsPage extends React.Component {
                         </View>
 
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={styles.textRotulo}>Tempo de execução: </Text>
-                            <Text style={styles.text}>{this.state.seasons.runtime}min</Text>
+                            <MaterialIcons name="av-timer" size={24} color="#bfbbbb" />
+                            <Text style={styles.text}> {this.state.seasons.runtime}min</Text>
                         </View>
 
                         <View style={{ flexDirection: 'row' }}>
@@ -59,18 +59,11 @@ export default class SeasonDetailsPage extends React.Component {
                             <Text style={styles.text}>{newData}</Text>
                         </View>
 
-                        <View style={{ flexDirection: 'row' }}>
+                        <View style={{ flexDirection: 'column' }}>
                             <Text style={styles.textRotulo}>Resumo: </Text>
-                            <Text style={styles.text}>{newstr}</Text>
+                            <Text style={[styles.text, { marginHorizontal: 5 }]}>{newstr}</Text>
                         </View>
 
-                        <View style={{ flexDirection: 'row', width: 10 }}>
-                            <Text style={styles.textRotulo}>URL: </Text>
-                            <TouchableOpacity style={{ position: 'absolute', right: 0, alignSelf: 'center' }}>
-                                <MaterialIcons name="http" size={24} color="white" />
-                            </TouchableOpacity>
-                            <Text style={styles.text}>{this.state.seasons.url}</Text>
-                        </View>
                     </View>
                 </View>
             </ScrollView>
@@ -90,8 +83,8 @@ const styles = StyleSheet.create({
         // resizeMode: "cover",
         justifyContent: 'center',
         alignItems: 'center',
-        height: 300,
-        width: 300
+        height: 400,
+        width: '100%'
     },
     text: {
         color: 'white',
