@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView, TouchableOpacity, Text } from 'react-native'
+import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
 import axios from 'axios'
 import {useNavigation} from '@react-navigation/native'
 import {MaterialIcons} from '@expo/vector-icons'
@@ -36,9 +36,9 @@ export default class SeasonPage extends React.Component{
                      </TouchableOpacity>
                  </View>
             </View>
-            {/* colocar a listagem */}
+            
             <ScrollView>
-                <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                     <SeasonList seasons={this.state.seasons} onPressItem={(seasons) => {this.props.navigation.navigate('Detalhe do epsódio',
                     { "seasons": seasons })}} />                   
                 </View>

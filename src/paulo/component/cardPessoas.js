@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, Title, Paragraph, Avatar } from 'react-native-paper';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { Title, Paragraph, Avatar } from 'react-native-paper';
+import { View,TouchableOpacity, StyleSheet } from 'react-native'
 
 const PeopleListItem = (props) => {
     const { people, onPressItemDetails } = props

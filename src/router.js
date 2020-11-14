@@ -21,6 +21,7 @@ function Routes(){
                 <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
                 <Stack.Screen name="Pessoas" component={ListPessoas}/>
                 <Stack.Screen name="Detalhes da Pessoa" component={DetalhesPessoa}/>
+
                 <Stack.Screen name="Epsódios" component={SeasonPage} /> 
                 <Stack.Screen name="Detalhe do epsódio" component={SeasonDetailsPage} /> 
 
