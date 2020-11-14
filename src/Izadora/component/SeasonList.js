@@ -19,7 +19,7 @@ const SeasonList = props => {
         return (
             <View style={style.headerStyle}>
                 <Text style={style.titleStyle}>
-                    Epsódios
+                    Epsódios e informações
                 </Text>
             </View>
         )
@@ -48,7 +48,7 @@ const style = StyleSheet.create(
         headerStyle: {
             flex: 1,
             height: 50,
-            width: '100%',
+            width: 400,
             backgroundColor: "#bfbbbb",
             justifyContent: "center",
             alignItems: 'center'
