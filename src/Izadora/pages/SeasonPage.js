@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView, TouchableOpacity, Text } from 'react-native'
+import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
 import axios from 'axios'
 import {useNavigation} from '@react-navigation/native'
 import {MaterialIcons} from '@expo/vector-icons'

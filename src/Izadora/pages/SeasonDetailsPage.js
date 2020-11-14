@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { MaterialIcons } from '@expo/vector-icons'
 
+
 export default class SeasonDetailsPage extends React.Component {
 
     constructor(props) {
