@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, ScrollView, ImageBackground, Image, TouchableOpacity} from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons'
 import {useNavigation} from '@react-navigation/native'
 import Cards from './component/card'
@@ -28,7 +28,7 @@ export default function Home(){
                 <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <Cards by="Vagner Rubens"  onClick={()=> navigation.navigate('Equipe')}>
                         Direção
-                    </Cards>                    
+                    </Cards>                   
                 </View>
                 
                 

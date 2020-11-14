@@ -1,11 +1,8 @@
 import React from 'react'
-import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, ScrollView,TouchableOpacity} from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons'
-import {useNavigation} from '@react-navigation/native'
 import Lista from '../component/listagem'
-import axios from 'axios';
-
-// const navigation = useNavigation();
+import axios from 'axios'
 
 export default class Pessoas extends React.Component {
     constructor(props) {
@@ -19,9 +16,7 @@ export default class Pessoas extends React.Component {
       axios
         .get('http://api.tvmaze.com/shows/1/cast')
         .then(response => {
-          //const { results } = response.data
           this.setState({
-            //peoples: results
             peoples: response.data
           })
         })

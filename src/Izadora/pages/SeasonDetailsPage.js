@@ -21,15 +21,13 @@ export default class SeasonDetailsPage extends React.Component{
         return(
             
             <ScrollView style={styles.scrollView}>           
-              <View> 
              <ImageBackground source={imagem} style={styles.image}>  
                 <Text style={styles.text}>{'Temporada ' + this.state.seasons.season}</Text>                   
                 <Text style={styles.text}>{this.state.seasons.number + '. ' + this.state.seasons.name}</Text>                
                 <Text style={styles.text}>Data de exibição: {this.state.seasons.airdate}</Text>   
                 <Text style={styles.text}>Resumo: {newstr}</Text>     
                 <Text style={styles.text}>url: {this.state.seasons.url}</Text>       
-                </ImageBackground>
-            </View>          
+                </ImageBackground>         
             </ScrollView>
         
         )

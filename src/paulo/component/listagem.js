@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView, View, FlatList, TouchableOpacity, StyleSheet, Text, StatusBar } from 'react-native';
+import { SafeAreaView, FlatList} from 'react-native';
 import CardPessoas from './cardPessoas'
 
 const listagem = props => {
