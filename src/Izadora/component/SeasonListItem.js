@@ -12,7 +12,7 @@ const SeasonListItem = props => {
         }} >
             
           <View style={style.line}>
-               { <Image style={{height: 40, width: 40}} source={{uri:imagem}}/>   }
+               { <Image style={{height: 40, width: 40, marginLeft: 7}} source={{uri:imagem}}/>   }
                 <Text style={style.lineText} key={id}> 
                 {`${seasons.number + '. ' + seasons.name}`}
                 </Text>
