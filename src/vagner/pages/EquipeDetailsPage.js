@@ -99,13 +99,13 @@ const styles = StyleSheet.create({
     },
     
     textoName: {
-         fontFamily: 'Anton_400Regular',
-        fontSize: 16,
-        fontWeight: "200"
+         fontFamily: 'Fondamento_400Regular',
+        fontSize: 14,
+        fontWeight: "bold"
     },
     textoRotulo: {
-         fontFamily: 'Anton_400Regular',
-        fontSize: 12,
+         fontFamily: 'Vidaloka_400Regular',
+        fontSize: 18,
         color: '#cabfbf'
     }
 }
