@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { MaterialIcons } from '@expo/vector-icons'
+import { AntDesign } from '@expo/vector-icons'; 
 
 
 export default class SeasonDetailsPage extends React.Component {
@@ -32,8 +33,9 @@ export default class SeasonDetailsPage extends React.Component {
             <ScrollView style={{ backgroundColor: 'black' }}>
                 <View>
                     <View style={{ alignItems: 'center' }}>
-                        <Image source={imagem} style={styles.image}></Image>
+                        <Image source={{ uri: imagem }} style={styles.image}></Image>
                     </View>
+
                     <View style={{ justifyContent: 'space-around', paddingHorizontal: 10, paddingVertical: 5 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <View style={{ flexDirection: 'row' }}>
@@ -80,7 +82,6 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        // resizeMode: "cover",
         justifyContent: 'center',
         alignItems: 'center',
         height: 400,

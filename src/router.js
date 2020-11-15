@@ -6,8 +6,8 @@ import Home from './home'
 import ListPessoas from './paulo/pages/pessoas'
 import DetalhesPessoa from './paulo/pages/detalhes'
 
-import SeasonDetailsPage from './izadora/pages/SeasonDetailsPage'
-import SeasonPage from './izadora/pages/SeasonPage'
+import SeasonDetailsPage from './Izadora/pages/SeasonDetailsPage'
+import SeasonPage from './Izadora/pages/SeasonPage'
 
 import EquipeDetailsPage from './vagner/pages/EquipeDetailsPage'
 import EquipePage from './vagner/pages/Equipe'
