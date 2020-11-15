@@ -37,10 +37,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 5,
-        width: 200,
+        width: 170,
         height: 200,
-        //backgroundColor: "#f2f2f3",
-
+        
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -52,6 +51,6 @@ const styles = StyleSheet.create({
         elevation: 2,
     },
     text: {
-        fontFamily: 'Anton_400Regular'
+        fontFamily: 'Vidaloka_400Regular'
     }
 })
