@@ -42,13 +42,6 @@ export default class EquipeDetailsPage extends React.Component{
                         <Text style={styles.textoRotulo}>Função:</Text>
                         <Text style={styles.textoName}> {this.state.equipe.type}</Text>                             
                     </View>
-                        
-               
-                   {/* <View>
-                        <Text style={styles.textoRotulo}>URL:</Text>
-                        <Text style={styles.textoName}>: {this.state.equipe.person.url}</Text>
-                   </View> */}
-
                         <View>
                             <Text style={styles.textoRotulo}>Nome:</Text>
                             <Text style={styles.textoName}> {this.state.equipe.person.name} </Text>

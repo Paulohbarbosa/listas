@@ -1,6 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, ScrollView,TouchableOpacity} from 'react-native'
-import {MaterialIcons} from '@expo/vector-icons'
+import {View, Text, StyleSheet, ScrollView} from 'react-native'
 import Lista from '../component/listagem'
 import axios from 'axios'
 
@@ -30,9 +29,6 @@ export default class Pessoas extends React.Component {
                  <View style={styles.textContainer}>
                      <Text style={styles.text}>Lista</Text>
                      <Text style={[styles.text,{color: '#cececf'}]}>Pessoas</Text>
-                     <TouchableOpacity style={{position: 'absolute', right: 0, alignSelf: 'center'}}>
-                         <MaterialIcons name="filter-list" size={24} color="#000"/>
-                     </TouchableOpacity>
                  </View>
             </View>
             <ScrollView>

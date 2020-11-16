@@ -1,8 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, ScrollView} from 'react-native'
 import axios from 'axios'
-import {useNavigation} from '@react-navigation/native'
-import {MaterialIcons} from '@expo/vector-icons'
 import SeasonList from '../component/SeasonList';
 
 export default class SeasonPage extends React.Component{
@@ -31,9 +29,6 @@ export default class SeasonPage extends React.Component{
                  <View style={styles.textContainer}>
                      <Text style={styles.text}>Lista</Text>
                      <Text style={[styles.text,{color: '#cececf'}]}>Epsódios</Text>
-                     <TouchableOpacity style={{position: 'absolute', right: 0, alignSelf: 'center'}}>
-                         <MaterialIcons name="filter-list" size={24} color="#000"/>
-                     </TouchableOpacity>
                  </View>
             </View>
             

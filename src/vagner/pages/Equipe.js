@@ -1,7 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
-import {MaterialIcons} from '@expo/vector-icons'
-import {useNavigation} from '@react-navigation/native'
+import {View, Text, StyleSheet, ScrollView} from 'react-native'
 import Lista from '../component/listagem'
 import axios from 'axios';
 
@@ -31,9 +29,6 @@ export default class EquipePage extends React.Component {
                  <View style={styles.textContainer}>
                      <Text style={styles.text}>Lista</Text>
                      <Text style={[styles.text,{color: '#cececf'}]}>Direção</Text>
-                     <TouchableOpacity style={{position: 'absolute', right: 0, alignSelf: 'center'}}>
-                         <MaterialIcons name="filter-list" size={24} color="#000"/>
-                     </TouchableOpacity>
                  </View>
             </View>
             <ScrollView>
